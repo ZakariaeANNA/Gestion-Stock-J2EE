@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16243628189171" configfile="/G_Stock/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" x="338" y="562" id="pf16243629174352" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf16244413408660 pf16244625397894" inlinks="pf16244413408660 pf16247096758010 pf16247111317372" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" x="554" y="764" id="pf16244625397905" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf16244625397894 pf16247111317373" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="AjouterArticle" x="338" y="178" id="pf16246311527083" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf16247111317374" path="/AjouterArticle.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="modifier" x="338" y="967" id="pf16246311527084" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf16247111317375" path="/modifier.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="SupprimerArticle" x="338" y="1351" id="pf16246311527085" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf16247111317376" path="/SupprimerArticle.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="764" id="pf16247096758021" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf16247096758010 pf16247111317373 pf16247111317375 pf16247111317376 pf16247111317374 pf16247111317372 pf16247149033311" path="/*"/>
+  <nodes xsi:type="pageflow:PFPage" name="Approvisoinement" x="338" y="1735" id="pf16247149033300" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" inlinks="pf16247149033311" path="/Approvisoinement.jsp"/>
+  <links id="pf16244625397894" target="pf16244625397905" source="pf16243629174352" outcome="success" redirect="true"/>
+  <links id="pf16247096758010" target="pf16243629174352" source="pf16247096758021" outcome="login" redirect="true"/>
+  <links id="pf16247111317373" target="pf16244625397905" source="pf16247096758021" outcome="index" redirect="true"/>
+  <links id="pf16247111317375" target="pf16246311527084" source="pf16247096758021" outcome="Modifier" redirect="true"/>
+  <links id="pf16247111317376" target="pf16246311527085" source="pf16247096758021" outcome="Supprimer" redirect="true"/>
+  <links id="pf16247111317374" target="pf16246311527083" source="pf16247096758021" outcome="Ajouter" redirect="true"/>
+  <links id="pf16247111317372" target="pf16243629174352" source="pf16247096758021" outcome="logout" redirect="true"/>
+  <links id="pf16247149033311" target="pf16247149033300" source="pf16247096758021" outcome="Approvisoinement" redirect="true"/>
+  <links id="pf16244413408660" target="pf16243629174352" source="pf16243629174352" outcome="failure" redirect="true">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+</pageflow:Pageflow>
